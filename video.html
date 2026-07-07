@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Catalog Z Style Layout</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+.bg-task1{
+    background:#fff;
+    border-top:1px solid #d8d8d8;
+    padding:10px 0;
+}
+.navbar-brand{
+  font-size:27px;
+    font-weight:500;
+    color:#2f9bd6 !important;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.navbar-brand i{
+    font-size: 30px;
+      color:#2f9bd6;
+}
+.navbar-nav{
+    margin-left: auto;
+    gap: 20px;
+}
+.navbar-nav .nav-link{
+    font-size:20px;
+    color:#666 !important;
+    font-weight:400;
+    padding:9px 15px !important;
+    position:relative;
+    transition:.3s;
+}
+.navbar-nav .nav-link:hover{
+    color:#009999 !important;
+}
+
+.navbar-nav .nav-link.active{
+    color:#666 !important;
+}
+.navbar-nav .nav-link.active:hover{
+    color:#2f9bd6 !important;
+}
+ .navbar-nav .nav-link.videos:hover{
+     color:#009999 !important;
+ }
+ .navbar-nav .nav-link.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:5px;
+    background:#2fcbf4;
+}
+.navbar-nav .nav-link.videos:hover::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:90%;
+    height:5px;
+    background:#FF6666;
+}
+.navbar-nav .nav-link.about:hover::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:90%;
+    height:5px;
+    background:#33CC66;
+    #CC66CC
+}
+.navbar-nav .nav-link.contact:hover::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:90%;
+    height:5px;
+    background:#CC66CC;
+
+}
+/* hero section  */
+.hero{
+    background:url('assets/images/video.png') center/cover;
+    min-height:400px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.search-box{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    /* border-radius:60px; */
+    overflow:hidden;
+    display:flex;
+}
+
+.search-box input{
+    border:none;
+    padding:10px;
+    width:100%;
+    outline:none;
+}
+.search-box button{
+    border:none;
+    background:#009999;
+    color:#fff;
+    width:120px;
+    font-size:20px;
+    padding: 12px 15px;
+}
+.search-box button:hover{
+   
+    background:#0d6e1f;
+    color:#fff;
+   ;
+}
+.search-box input{
+color: #009999;
+}
+/* Mobile Toggle */
+.navbar-toggler{
+    border:none;
+    box-shadow:none !important;
+}
+
+/* Responsive */
+@media(max-width:991px){
+
+    .navbar-brand{
+        font-size:32px;
+    }
+
+    .navbar-brand i{
+        font-size:32px;
+    }
+
+    .navbar-nav{
+        margin-top:20px;
+        gap:0;
+    }
+
+    .navbar-nav .nav-link{
+        padding:12px 0 !important;
+        display:inline-block;
+    }
+
+    .navbar-nav .nav-link.active::after{
+        width:60px;
+    }
+}
+
+/* garlley section  */
+.gallery-section{
+    background:#f5f5f5;
+}
+
+.gallery-title{
+    color:#009999;
+    font-size:22px;
+}
+.page-count{
+    color:#009999;
+    font-size:14px;
+}
+
+.photo-card{
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+.photo-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    transition:.6s;
+}
+
+/* .photo-card:hover img{
+    transform:scale(1.15);
+} */
+ .overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(18, 12, 12, 0.15);
+    opacity:0;
+    transition:.5s;
+}
+.overlay-content{
+    width:80%;
+    height:80%;
+    border:3px solid rgba(255,255,255,.9);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:scale(.5);
+    transition:.5s;
+}
+
+.overlay-content h5{
+    color:#fff;
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.photo-card:hover .overlay{
+    opacity:1;
+}
+.photo-card:hover .overlay-content{
+    transform:scale(1);
+     background:rgba(0, 0, 0, 0.15);
+}
+
+.photo-info{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+    color:#999;
+    font-size:13px;
+}
+
+.pagination-area{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:60px;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.btn-page{
+    background:#009999;
+    color:#fff;
+    border:none;
+    padding:12px 28px;
+    font-size:14px;
+}
+.btn-page:hover{
+    background:#046767;
+    color:#fff;
+    border:none;
+    padding:12px 28px;
+    font-size:14px;
+}
+
+.numbers{
+    display:flex;
+    gap:10px;
+}
+
+.numbers a{
+    width:40px;
+    height:40px;
+    background:#e7e7e7;
+    text-decoration:none;
+    color:#666;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.numbers a.active{
+    background:#009999;
+    color:#fff;
+}
+.numbers a:hover{
+    background:#009999;
+    color:#fff;
+}
+
+@media(max-width:768px){
+
+    .photo-card img{
+        height:180px;
+    }
+
+    .overlay-content h5{
+        font-size:22px;
+    }
+
+    .pagination-area{
+        justify-content:center;
+    }
+
+}
+/* footer section  */
+.catalog-footer{
+    background:#f3f3f3;
+    padding:40px 0 80px;
+}
+.catalog-footer h3{
+    color:#009999;
+    font-size:32px;
+    font-weight:400;
+    margin-bottom:35px;
+     padding-left: 50px;
+}
+.catalog-footer p{
+    color:#8c8c8c;
+    font-size:18px;
+    line-height:1.9;
+    padding-left: 50px;
+}
+.catalog-footer p a{
+    color:#0d6efd;
+    text-decoration:none;
+}
+.catalog-footer p a:hover{
+    color:#009999;
+    text-decoration:none;
+}
+.footer-links{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.footer-links li{
+    margin-bottom:5px;
+}
+
+.footer-links li a{
+    text-decoration:none;
+    color:#8c8c8c;
+    font-size:17px;
+    transition:.3s;
+     padding-left: 50px;
+}
+.footer-links li a:hover{
+    color:#009999;
+
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.social-icons a{
+    width:50px;
+    height:40px;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:#999;
+    font-size:16px;
+    transition:.4s;
+    
+}
+
+.social-icons a:hover{
+    background:#009999;
+    color:#fff;
+    /* transform:translateY(-5px); */
+}
+.right-links{
+    margin-top:80px;
+     padding-left:90px;
+}
+
+
+.footer-bottom{
+    margin-top:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+     padding-left: 80px;
+}
+
+
+.copyright,
+.designer{
+    color:#8c8c8c;
+    font-size:16px;
+}
+/* Tablet */
+
+@media(max-width:991px){
+
+    .catalog-footer{
+        padding:60px 0;
+    }
+
+    .catalog-footer h3{
+        font-size:32px;
+    }
+
+    .catalog-footer p{
+        font-size:20px;
+    }
+
+    .footer-links li a{
+        font-size:22px;
+    }
+
+    .copyright,
+    .designer{
+        font-size:18px;
+    }
+
+    .right-links{
+        margin-top:0;
+    }
+}
+
+/* Mobile */
+
+@media(max-width:767px){
+
+    .catalog-footer{
+        text-align:center;
+    }
+
+    .catalog-footer h3{
+        font-size:28px;
+    }
+
+    .catalog-footer p{
+        font-size:17px;
+    }
+
+    .footer-links li a{
+        font-size:18px;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .social-icons a{
+        width:55px;
+        height:55px;
+        font-size:18px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .copyright,
+    .designer{
+        font-size:16px;
+    }
+}
+</style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg bg-task1">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">
+    <i class="fa-solid fa-film"></i>
+    Catalog-Z
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+        <a class="nav-link active" href="task2.html">Photos</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link videos" href="video.html">Videos</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link about" href="aboutus-task2.html">About</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link contact" href="contac-us-task1.html">contact</a>
+    </li>
+</ul>
+      
+    </div>
+  </div>
+</nav>
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content container">
+
+<div class="search-box">
+<!-- 
+<input type="text" placeholder="Search ">
+
+<button>
+<i class="fa-solid fa-magnifying-glass"></i>
+</button> -->
+
+</div>
+
+</div>
+
+</section>
+<!-- garlley section  -->
+ <section class="gallery-section py-5">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="gallery-title">Latest Photos</h4>
+
+            <div class="page-count">
+                Page <span>1</span> of 200
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                    <img src="assets/images/pic2.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>CLOCK</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-info">
+                    <span>18 Oct 2020</span>
+                    <span>9,906 Views</span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic3.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>PLANTS</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-info">
+                    <span>14 Oct 2020</span>
+                    <span>16,100 Views</span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                    <img src="assets/images/pic4.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>MORNING</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-info">
+                    <span>12 Oct 2020</span>
+                    <span>12,452 Views</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                 <img src="assets/images/pic5.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>PINKY</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="photo-info">
+                    <span>10 Oct 2020</span>
+                    <span>11,402 Views</span>
+                </div>
+            </div>
+
+            <!-- More Cards -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                  <img src="assets/images/pic6.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>HANGERS</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic7.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>PERFUMES</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                  <img src="assets/images/pic8.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>BUS</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic9.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>NEW YORK</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic10.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>ABSTRACT</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic11.png" alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>FLOWERS</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic12.png"alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>ROSY</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic13.png"alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>ROCKY</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic14.png"alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>PURPLE</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic15.png"alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>SEA</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic16.png"alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>TURTLE</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="photo-card">
+                   <img src="assets/images/pic17.png"alt="">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h5>PEACE</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+
+        <div class="pagination-area">
+
+            <button class="btn-page">
+                Previous
+            </button>
+
+            <div class="numbers">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+            </div>
+
+            <button class="btn-page">
+                Next Page
+            </button>
+
+        </div>
+
+    </div>
+</section>
+<!-- footer section  -->
+ <footer class="catalog-footer">
+    <div class="container">
+       <div class="row gy-5 gx-lg-5">
+
+            <!-- About -->
+            <div class="col-lg-5 col-md-6">
+                <h3>About Catalog-Z</h3>
+
+                <p>
+                    Catalog-Z is free<a href="#"> Bootstrap</a>5 Alpha 2 HTML template
+                    for video and photo websites. You can freely use this
+                    TemplateMo layout for a front-end integration with any
+                    kind of CMS website.
+                </p>
+            </div>
+
+            <!-- Links -->
+            <div class="col-lg-3 col-md-6">
+                <h3>Our Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Our Company</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="col-lg-4 col-md-6">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                
+                <ul class="footer-links right-links">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- Policies -->
+           
+
+        </div>
+
+        <!-- Bottom Footer -->
+
+        <div class="footer-bottom">
+
+            <div class="copyright">
+                Copyright 2020 Catalog-Z Company.
+                All rights reserved.
+            </div>
+
+            <div class="designer">
+                Designed by TemplateMo
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

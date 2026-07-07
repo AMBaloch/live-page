@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Catalog Z Style Layout</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+.bg-task1{
+    background:#fff;
+    border-top:1px solid #d8d8d8;
+    padding:10px 0;
+}
+.navbar-brand{
+  font-size:27px;
+    font-weight:500;
+    color:#2f9bd6 !important;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.navbar-brand i{
+    font-size: 30px;
+      color:#2f9bd6;
+}
+.navbar-nav{
+    margin-left: auto;
+    gap: 20px;
+}
+.navbar-nav .nav-link{
+    font-size:20px;
+    color:#666 !important;
+    font-weight:400;
+    padding:9px 15px !important;
+    position:relative;
+    transition:.3s;
+}
+.navbar-nav .nav-link:hover{
+    color:#009999 !important;
+}
+
+.navbar-nav .nav-link.active{
+    color:#666 !important;
+}
+.navbar-nav .nav-link.active:hover{
+    color:#2f9bd6 !important;
+}
+ .navbar-nav .nav-link.videos:hover{
+     color:#009999 !important;
+ }
+ .navbar-nav .nav-link.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:5px;
+    background:#2fcbf4;
+}
+.navbar-nav .nav-link.videos:hover::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:90%;
+    height:5px;
+    background:#FF6666;
+}
+.navbar-nav .nav-link.about:hover::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:90%;
+    height:5px;
+    background:#33CC66;
+    #CC66CC
+}
+.navbar-nav .nav-link.contact:hover::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:90%;
+    height:5px;
+    background:#CC66CC;
+
+}
+/* hero section  */
+.hero{
+    background:url('assets/images/pic1.png') center/cover;
+    min-height:200px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.search-box{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    /* border-radius:60px; */
+    overflow:hidden;
+    display:flex;
+}
+
+.search-box input{
+    border:none;
+    padding:10px;
+    width:100%;
+    outline:none;
+}
+.search-box button{
+    border:none;
+    background:#009999;
+    color:#fff;
+    width:120px;
+    font-size:20px;
+    padding: 12px 15px;
+}
+.search-box button:hover{
+   
+    background:#0d6e1f;
+    color:#fff;
+   ;
+}
+.search-box input{
+color: #009999;
+}
+/* Mobile Toggle */
+.navbar-toggler{
+    border:none;
+    box-shadow:none !important;
+}
+
+/* Responsive */
+@media(max-width:991px){
+
+    .navbar-brand{
+        font-size:32px;
+    }
+
+    .navbar-brand i{
+        font-size:32px;
+    }
+
+    .navbar-nav{
+        margin-top:20px;
+        gap:0;
+    }
+
+    .navbar-nav .nav-link{
+        padding:12px 0 !important;
+        display:inline-block;
+    }
+
+    .navbar-nav .nav-link.active::after{
+        width:60px;
+    }
+}
+
+
+/* footer section  */
+.catalog-footer{
+    background:#f3f3f3;
+    padding:40px 0 80px;
+}
+.catalog-footer h3{
+    color:#009999;
+    font-size:32px;
+    font-weight:400;
+    margin-bottom:35px;
+     padding-left: 50px;
+}
+.catalog-footer p{
+    color:#8c8c8c;
+    font-size:18px;
+    line-height:1.9;
+    padding-left: 50px;
+}
+.catalog-footer p a{
+    color:#0d6efd;
+    text-decoration:none;
+}
+.catalog-footer p a:hover{
+    color:#009999;
+    text-decoration:none;
+}
+.footer-links{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+.footer-links li{
+    margin-bottom:5px;
+}
+
+.footer-links li a{
+    text-decoration:none;
+    color:#8c8c8c;
+    font-size:17px;
+    transition:.3s;
+     padding-left: 50px;
+}
+.footer-links li a:hover{
+    color:#009999;
+
+}
+
+.social-icons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.social-icons a{
+    width:50px;
+    height:40px;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    color:#999;
+    font-size:16px;
+    transition:.4s;
+    
+}
+
+.social-icons a:hover{
+    background:#009999;
+    color:#fff;
+    /* transform:translateY(-5px); */
+}
+.right-links{
+    margin-top:80px;
+     padding-left:90px;
+}
+
+
+.footer-bottom{
+    margin-top:50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+     padding-left: 80px;
+}
+
+
+.copyright,
+.designer{
+    color:#8c8c8c;
+    font-size:16px;
+}
+/* Tablet */
+
+@media(max-width:991px){
+
+    .catalog-footer{
+        padding:60px 0;
+    }
+
+    .catalog-footer h3{
+        font-size:32px;
+    }
+
+    .catalog-footer p{
+        font-size:20px;
+    }
+
+    .footer-links li a{
+        font-size:22px;
+    }
+
+    .copyright,
+    .designer{
+        font-size:18px;
+    }
+
+    .right-links{
+        margin-top:0;
+    }
+}
+
+/* Mobile */
+
+@media(max-width:767px){
+
+    .catalog-footer{
+        text-align:center;
+    }
+
+    .catalog-footer h3{
+        font-size:28px;
+    }
+
+    .catalog-footer p{
+        font-size:17px;
+    }
+
+    .footer-links li a{
+        font-size:18px;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .social-icons a{
+        width:55px;
+        height:55px;
+        font-size:18px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .copyright,
+    .designer{
+        font-size:16px;
+    }
+}
+
+
+/* contact us section  */
+.features-section{
+    padding:100px 0;
+    background:#fff;
+}
+/* .feature-card{
+    background:#fff;
+    padding:40px 30px;
+    height:100%;
+    text-align:center;
+    border-radius:15px;
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+} */
+.icon-box{
+    width:180px;
+    height:180px;
+    border:2px solid #009999;
+    margin:0 auto 30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.icon-box i{
+    font-size:45px;
+    color:#009999;
+}
+
+.feature-card h2{
+    color:#009999;
+    font-size:32px;
+    margin-bottom:20px;
+    font-weight:400;
+}
+.feature-card p{
+    color:#777;
+    line-height:1.9;
+    font-size:17px;
+    margin-bottom:30px;
+}
+.feature-btn{
+    display:inline-block;
+    padding:12px 55px;
+    background:#009999;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    transition:.3s;
+    margin-left: 110px;
+}
+.feature-btn:hover{
+    background:#065858;
+    color:#fff;
+}
+/* new section  */
+.info-section{
+      padding:60px 0;
+    background:#f5f5f5;
+}
+.info-section h2{
+     color:#009999;
+    font-size:32px;
+    margin-bottom:20px;
+    font-weight:400;
+}
+.info-section p{
+      color:#777;
+    line-height:1.9;
+    font-size:17px;
+    margin-bottom:30px;
+}
+ /* new section  */
+.about-section{
+    background:#fff;
+    padding:80px 0;
+}
+
+.about-img{
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.about-img img{
+    width:100%;
+    transition:.5s;
+}
+
+
+
+.about-img h2{
+    color:#009999;
+    font-size:38px;
+    margin-bottom:25px;
+    font-weight:400;
+}
+
+.about-content p{
+    color:#8c8c8c;
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+
+.about-content a{
+    text-decoration: none;
+}
+.about-content a:hover{
+    color: #009999;
+}
+@media(max-width:991px){
+
+    .about-content{
+        text-align:center;
+    }
+
+  .about-img h2{
+        font-size:34px;
+    }
+}
+
+@media(max-width:767px){
+
+    .about-section{
+        padding:60px 0;
+    }
+
+.about-img h2{
+        font-size:28px;
+    }
+
+    .about-content p{
+        font-size:16px;
+    }
+}
+
+/* form section  */
+
+
+.contact-section{
+    padding:90px 0;
+}
+
+.contact-title{
+    color:#009999;
+    font-size:38px;
+    font-weight:400;
+    margin-bottom:35px;
+}
+
+/* FORM */
+
+.contact-form .form-control,
+.contact-form .form-select{
+    border:1px solid #d9d9d9;
+    border-radius:0;
+    height:55px;
+    font-size:15px;
+    color:#555;
+    box-shadow:none;
+}
+
+.contact-form textarea{
+    min-height:160px;
+    resize:vertical;
+    padding-top:15px;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus{
+    border-color:#009999;
+    box-shadow:none;
+}
+
+.send-btn{
+    background:#009999;
+    color:#fff;
+    border:none;
+    padding:12px 40px;
+    border-radius:4px;
+    transition:.3s;
+    font-size:18px;
+}
+
+.send-btn:hover{
+    background:#007d7d;
+}
+
+/* ADDRESS */
+
+.address-text{
+    color:#8a8a8a;
+    line-height:2;
+    font-size:16px;
+    margin-bottom:35px;
+}
+
+.contact-info{
+    list-style:none;
+    padding:0;
+    margin-top:35px;
+}
+
+.contact-info li{
+    margin-bottom:18px;
+    color:#888;
+    font-size:15px;
+}
+
+.contact-info i{
+    width:30px;
+    color:#888;
+}
+
+/* MAP */
+
+.map-box{
+    width:100%;
+    height:360px;
+    overflow:hidden;
+}
+
+.map-box iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+/*=========================
+Responsive
+=========================*/
+
+@media(max-width:991px){
+
+.contact-title{
+    font-size:32px;
+}
+
+.contact-column{
+    margin-bottom:50px;
+}
+
+}
+
+@media(max-width:767px){
+
+.contact-section{
+    padding:50px 0;
+}
+
+.contact-title{
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.send-btn{
+    width:100%;
+}
+
+.map-box{
+    height:300px;
+}
+
+}
+/* 2nd section  */
+/************************
+TEAM SECTION
+************************/
+
+.team-section{
+    padding:80px 0;
+}
+
+.team-card{
+    margin-bottom:40px;
+}
+
+.team-image{
+    overflow:hidden;
+}
+
+.team-image img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:.4s;
+    display:block;
+}
+
+.team-card:hover img{
+    transform:scale(1.06);
+}
+
+.team-name{
+    color:#009999;
+    font-size:34px;
+    font-weight:400;
+    margin:25px 0 15px;
+}
+
+.team-position{
+    color:#e85b9b;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.team-text{
+    color:#8a8a8a;
+    font-size:16px;
+    line-height:2;
+    margin-bottom:25px;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    width:48px;
+    height:48px;
+    background:#f3f3f3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:#666;
+    font-size:18px;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#009999;
+    color:#fff;
+}
+
+/**********************
+Responsive
+**********************/
+
+@media(max-width:991px){
+
+.team-name{
+    font-size:30px;
+}
+
+.team-image img{
+    height:260px;
+}
+
+}
+
+@media(max-width:767px){
+
+.team-section{
+    padding:60px 0;
+}
+
+.team-name{
+    font-size:28px;
+}
+
+.team-position{
+    font-size:17px;
+}
+
+.team-image img{
+    height:320px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg bg-task1">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">
+    <i class="fa-solid fa-film"></i>
+    Catalog-Z
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+        <a class="nav-link active" href="task2.html">photo</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link videos" href="video.html">Videos</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link about" href="aboutus-task2.html">About</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link contact" href="contac-us-task1.html">Contact</a>
+    </li>
+</ul>
+      
+    </div>
+  </div>
+</nav>
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content container">
+
+<div class="search-box">
+
+
+
+</div>
+
+</div>
+
+</section>
+<section class="contact-section">
+
+<div class="container">
+
+<div class="row gy-5">
+
+<!-- LEFT -->
+
+<div class="col-lg-4 contact-column">
+
+<h2 class="contact-title">Contact Page</h2>
+
+<form class="contact-form">
+
+<div class="mb-4">
+<input type="text" class="form-control" placeholder="Name">
+</div>
+
+<div class="mb-4">
+<input type="email" class="form-control" placeholder="Email">
+</div>
+
+<div class="mb-4">
+<select class="form-select">
+<option selected>Subject</option>
+<option>Web Design</option>
+<option>Development</option>
+<option>Support</option>
+</select>
+</div>
+
+<div class="mb-4">
+<textarea class="form-control" placeholder="Message"></textarea>
+</div>
+
+<button class="send-btn">
+Send
+</button>
+
+</form>
+
+</div>
+
+
+<!-- CENTER -->
+
+<div class="col-lg-4 contact-column">
+
+<h2 class="contact-title">Our Address</h2>
+
+<p class="address-text">
+Quisque eleifend mi et nisi eleifend pretium.
+Duis porttitor accumsan arcu id rhoncus.
+Praesent fermentum venenatis ipsum, eget vestibulum purus.
+</p>
+
+<p class="address-text">
+Nulla ut scelerisque elit, in fermentum ante.
+Aliquam congue mattis erat, eget iaculis enim posuere nec.
+Quisque risus turpis, tempus in iaculis.
+</p>
+
+<p class="address-text">
+120-240 Fusce eleifend varius tempus<br>
+Duis consectetur at ligula 10660
+</p>
+
+<ul class="contact-info">
+
+<li>
+<i class="fa-solid fa-envelope"></i>
+Email: info@company.com
+</li>
+
+<li>
+<i class="fa-solid fa-phone"></i>
+Tel: 010-020-0340
+</li>
+
+<li>
+<i class="fa-solid fa-globe"></i>
+URL: www.company.com
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- RIGHT -->
+
+<div class="col-lg-4 contact-column">
+
+<h2 class="contact-title">Our Location</h2>
+
+<div class="map-box">
+
+<iframe
+src="https://www.google.com/maps?q=Rio%20de%20Janeiro&output=embed"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- 2nd section  -->
+ 
+<section class="team-section">
+
+<div class="container-fluid">
+
+<div class="row">
+
+<!-- Member 1 -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="team-card">
+
+<div class="team-image">
+<img src="assets/images/cont1.png" alt="">
+</div>
+
+<h2 class="team-name">
+Ryan White
+</h2>
+
+<h5 class="team-position">
+Chief Executive Officer
+</h5>
+
+<p class="team-text">
+Mauris ante tellus, feugiat nec metus non,
+bibendum semper velit. Praesent laoreet urna
+id tristique fermentum. Morbi venenatis dui quis
+diam mollis pellentesque.
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-twitter"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Member 2 -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="team-card">
+
+<div class="team-image">
+<img src="assets/images/cont2.png" alt="">
+</div>
+
+<h2 class="team-name">
+Catherine Pinky
+</h2>
+
+<h5 class="team-position">
+Chief Marketing Officer
+</h5>
+
+<p class="team-text">
+Sed faucibus nec velit finibus accumsan.
+Sed varius augue et leo pharetra,
+in varius lacus eleifend.
+Quisque ut eleifend lacus.
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-twitter"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Member 3 -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="team-card">
+
+<div class="team-image">
+<img src="assets/images/cont3.png" alt="">
+</div>
+
+<h2 class="team-name">
+Johnny Brief
+</h2>
+
+<h5 class="team-position">
+Accounting Executive
+</h5>
+
+<p class="team-text">
+Sed faucibus nec velit finibus accumsan.
+Sed varius augue et leo pharetra,
+in varius lacus eleifend.
+Quisque ut eleifend lacus.
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-twitter"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Member 4 -->
+
+<div class="col-lg-3 col-md-6">
+
+<div class="team-card">
+
+<div class="team-image">
+<img src="assets/images/cont4.png" alt="">
+</div>
+
+<h2 class="team-name">
+George Nelson
+</h2>
+
+<h5 class="team-position">
+Creative Art Director
+</h5>
+
+<p class="team-text">
+Nunc convallis facilisis congue.
+Curabitur gravida rutrum justo sed pulvinar.
+Pellentesque ac ante in erat bibendum dignissim.
+</p>
+
+<div class="social-icons">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-twitter"></i></a>
+
+<a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+ 
+<!-- footer section  -->
+ <footer class="catalog-footer">
+    <div class="container">
+       <div class="row gy-5 gx-lg-5">
+
+            <!-- About -->
+            <div class="col-lg-5 col-md-6">
+                <h3>About Catalog-Z</h3>
+
+                <p>
+                    Catalog-Z is free<a href="#"> Bootstrap</a>5 Alpha 2 HTML template
+                    for video and photo websites. You can freely use this
+                    TemplateMo layout for a front-end integration with any
+                    kind of CMS website.
+                </p>
+            </div>
+
+            <!-- Links -->
+            <div class="col-lg-3 col-md-6">
+                <h3>Our Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Our Company</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="col-lg-4 col-md-6">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                
+                <ul class="footer-links right-links">
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- Policies -->
+           
+
+        </div>
+
+        <!-- Bottom Footer -->
+
+        <div class="footer-bottom">
+
+            <div class="copyright">
+                Copyright 2020 Catalog-Z Company.
+                All rights reserved.
+            </div>
+
+            <div class="designer">
+                Designed by TemplateMo
+            </div>
+
+        </div>
+
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
